@@ -10,7 +10,7 @@ export const Task = ({ task }) => {
   // додаємо код запуску операції видалення завдання при натисканні на кнопку видалення, і передаємо їй ідентифікатор.
   const handleDelete = () => dispatch(deleteTask(task.id));
   // додаємо код запуску операції зміни статусу під час кліку по чекбоксу, і передаємо їй весь об'єкт завдання.
-  const handleToggle = dispatch(toggleCompleted(task));
+  const handleToggle = () => dispatch(toggleCompleted(task));
 
   return (
     <div className={css.wrapper}>
