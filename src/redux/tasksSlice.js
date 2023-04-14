@@ -109,6 +109,13 @@ const tasksSlice = createSlice({
       state.isLoading = false;
       state.error = null;
       state.items = action.payload;
+      // або:
+      //  return {
+      //   ...state,
+      //   isLoading: false,
+      //   error: null,
+      //   items: action.payload
+      // };
     },
     [addTask.fulfilled](state, action) {
       state.isLoading = false;
